@@ -11,7 +11,7 @@ pipeline {
             }
          }
          stage('Deploy') {
-            withCredentials([ [ $class:'UsernamePasswordManager',
+            withCredentials([ [ $class:'UsernamePasswordMultiBinding',
             					CredentialsId:'PCF_LOGIN',
             					UsernameVariable:'USERNAME',
             					PasswordVariable:'PASSWORD',
